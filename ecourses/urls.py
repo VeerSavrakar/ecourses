@@ -25,3 +25,10 @@ urlpatterns = [
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+# x="helo {x} my name is {y}".format(x="yello",y="my")
+# print(x)
+
+# def hello():
+#     print("my name is veer")

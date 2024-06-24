@@ -24,7 +24,9 @@
     <title>Stylish White Nav Bar</title>
     <style>
         /* Custom styles */
-       
+       .navbar  {
+        
+       }
 
         .navbar-brand {
             
@@ -75,23 +77,18 @@
 
     <nav class="navbar">
         <a class="navbar-brand" href="{% url 'courses:home' %}">Ecourses</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        
         <div class="upper-navbar">
-            <div class="container" style="background-color: transparent;">
-                <div class="row justify-content-end">
-                    <div class="col-auto">
-                        <a href="{% url 'courses:home' %}">Home</a>
-                        {% if user.is_authenticated %}
-                        <a href="/logout">Logout</a>
-                        {% else %}
-                        <a href="/signup">Signup</a>
-                        <a href="/login"><i class="fas fa-user"></i></a>
-                        {% endif%}
-                    </div>
-                </div>
-            </div>
+           
+                <a href="{% url 'courses:home' %}">Home</a>
+                {% if user.is_authenticated %}
+                <a href="/logout">Logout</a>
+                
+                {% else %}
+                <a href="/signup">Signup</a>
+                <a href="/login"><i class="fas fa-user"></i></a>
+                {% endif%}
+            
         </div>
     </nav>
 
